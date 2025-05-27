@@ -1,0 +1,142 @@
+
+
+<div class = "container">
+
+    <form  (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+        <label>Position</label><br/>
+        <select [(ngModel)]="formData.Position" name="Position">
+
+        @for (item of positionList; track item) {
+            <option>{{ item }}</option>
+        }
+        </select>
+    </div>
+
+
+
+    <div>
+        <label>DateofHire</label> <br/>
+        <select [(ngModel)]="formData.DateofHire" name="DateofHire">
+            @for(item of dateofHireList; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+
+    <div>
+        <label>TermReason</label> <br/>
+            <select [(ngModel)]="formData.TermReason" name="TermReason">
+
+            @for(item of termReasonList; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+
+
+    <div>
+        <label>EmploymentStatus</label> <br/>
+        <select [(ngModel)]="formData.EmploymentStatus" name="EmploymentStatus">
+
+            @for(item of employmentStatusList; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+
+    <div>
+        <label>Department</label> <br/>
+        <select [(ngModel)]="formData.Department" name="Department">
+
+            @for(item of departmentList; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+
+    <div>
+        <label>PerformanceScore</label> <br/>
+        <select [(ngModel)]="formData.PerformanceScore" name="PerformanceScore">
+
+            @for(item of performanceScoreList; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+
+    <div>
+        <label>EngagementSurvey</label> <br/>
+        <select [(ngModel)]="formData.EngagementSurvey" name="EngagementSurvey">
+
+            @for(item of engagementSurveyList; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+
+    <div>
+        <label>EmpSatisfaction</label> <br/>
+        <select [(ngModel)]="formData.EmpSatisfaction" name="EmpSatisfaction">
+
+            @for(item of empSatisfactionList; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+
+    <div>
+        <label>DaysLateLast30</label> <br/>
+        <select [(ngModel)]="formData.DaysLateLast30" name="DaysLateLast30">
+
+            @for(item of daysLateLast30List; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+
+    <div>
+        <label>Absences</label><br/>
+        <select [(ngModel)]="formData.Absences" name="Absences">
+
+            @for(item of absencesList; track item){
+                <option>{{item}}</option>
+            }
+
+        </select>
+    </div>
+
+
+    <div class = "sub">
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+
+
+</div>
