@@ -38,3 +38,7 @@ def drop_columns(df: pd.DataFrame) -> pd.DataFrame:
     errors="ignore")
 
     return df
+
+
+def create_train_data(df: pd.DataFrame) -> pd.DataFrame:
+    print("dupa")
