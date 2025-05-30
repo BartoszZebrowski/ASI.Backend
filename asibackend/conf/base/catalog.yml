@@ -6,3 +6,21 @@
 hr_dataset:
   type: pandas.CSVDataset
   filepath: data/01_raw/HRDataset_v14.csv
+
+model_input_data:
+  type: pandas.CSVDataset
+  filepath: data/02_model_input/model_input_data.csv
+
+model:
+  type: tensorflow.TensorFlowModelDataset
+  filepath: data/03_models/trained_model
+  save_args:
+    overwrite: true
+
+scaler:
+  type: pickle.PickleDataSet
+  filepath: data/03_models/scaler.pkl
+
+encoder:
+  type: pickle.PickleDataSet
+  filepath: data/03_models/encoder.pkl

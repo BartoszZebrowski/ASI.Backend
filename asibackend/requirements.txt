@@ -3,4 +3,6 @@ jupyterlab>=3.0
 kedro~=0.19.12
 kedro-viz
 notebook
-kedro-datasets[pandas]
+kedro-datasets[all]
+tensorflow
+sklearn

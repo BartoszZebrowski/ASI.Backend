@@ -33,12 +33,20 @@ def drop_columns(df: pd.DataFrame) -> pd.DataFrame:
         "GenderID",
         "DeptID",
         "ManagerID",
-        "SpecialProjectsCount"
-    ], 
-    errors="ignore")
+        "SpecialProjectsCount",
+        "EmploymentStatus",
+        "TermReason"
+    ], errors="ignore")
 
     return df
 
 
-def create_train_data(df: pd.DataFrame) -> pd.DataFrame:
-    print("dupa")
+def feature_engineering(df: pd.DataFrame) -> pd.DataFrame:
+    df['DateofHire'] = pd.to_datetime(df['DateofHire'], format='%m/%d/%Y', errors='coerce')
+
+    df['YearsAtCompany'] = (pd.Timestamp.now() - df['DateofHire']).dt.days / 365.25
+    df['YearsAtCompany'] = df['YearsAtCompany'].round().astype(int)
+
+    df = df.drop(columns=['DateofHire'])
+
+    return df
