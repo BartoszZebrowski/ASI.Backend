@@ -15,13 +15,13 @@ def create_pipeline(**kwargs) -> Pipeline:
             node(
                 func=scale_data,
                 inputs=["model_input_data"],
-                outputs=["scaled_data","scaler"],
+                outputs="scaled_data",
                 name="scale_data_node",
             ),
             node(
                 func=one_hot_encoding,
                 inputs="scaled_data",
-                outputs=["prepered_data","encoder"],
+                outputs="prepered_data",
                 name="one_hot_encoding_node",
             ),
             node(

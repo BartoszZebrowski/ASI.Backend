@@ -1,60 +1,61 @@
+import os
+import pandas as pd
+import joblib
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from kedro.framework.context import KedroContext
 from kedro.framework.hooks import _create_hook_manager
 from kedro.framework.startup import bootstrap_project
+from tensorflow.keras.models import load_model
 
-import os
+model = load_model('../../data/03_models/trained_model.keras')
+scaler = joblib.load('../../data/04_scalers/scaler.pkl')
+encoder = joblib.load('../../data/05_encoders/encoder.pkl')
 
-project_path = os.getcwd()
-metadata = bootstrap_project(project_path)
-hook_manager = _create_hook_manager()
-context = KedroContext(metadata.package_name, project_path, hook_manager)
-
-catalog = context.catalog
-model = catalog.load("model")
+columnsToOneHotEncoding = ['Department', 'PerformanceScore']
+columnsToScale = [ 'EngagementSurvey', 'EmpSatisfaction', 'DaysLateLast30', 'Absences', 'YearsAtCompany']
 
 app = FastAPI()
 
 class InputData(BaseModel):
-    # Position: str ## dropdown z mozliwoscami wyboru: 
-    
-    #     ## Accountant I
-    #     ## Accountant I
-    #     ## Accountant I
-    #     ## Accountant I
-    #     ## Accountant I
-    #     ## Accountant I
-    #     ## Administrative Assistant
-    #     ## Area Sales Manager
-    #     ## BI Developer
-    Department: str
-        ## Admin Offices
-        ## Executive Office
-        ## IT/IS
-        ## Production
-        ## Sales
-        ## Software Engineering
-    PerformanceScore: str
-        ## Exceeds
-        ## Fully Meets
-        ## Needs Improvement
-        ## PIP
-    EngagmentSurvey: float ##od zera do 5 z czescia po przecinku
-    EmpSatisfaction: float ##od zera do 5
-    DaysLateLast30: float
-    Absences: float
-    YearsAtCompany: float 
+    department: str
+    performanceScore: str
+    engagmentSurvey: float
+    empSatisfaction: float
+    daysLateLast30: float
+    absences: float
+    yearsAtCompany: float
 
-
-
-
-
-@app.post("/predict/")
+@app.get("/predict")
 def predict(data: InputData):
-    features = data.dict()
-    # Użyj modelu bez pipeline
-    import numpy as np
-    input_array = np.array([[features["feature1"], features["feature2"], features["feature3"]]])
-    prediction = model.predict(input_array)
+
+    print(data)
+
+    input_dict = {
+        'Department': [data.department],
+        'PerformanceScore': [data.performanceScore],
+        'EngagementSurvey': [data.engagmentSurvey],
+        'EmpSatisfaction': [data.empSatisfaction],
+        'DaysLateLast30': [data.daysLateLast30],
+        'Absences': [data.absences],
+        'YearsAtCompany': [data.yearsAtCompany]
+    }
+
+    df = pd.DataFrame(input_dict)
+
+    encoded_array = encoder.transform(df[columnsToOneHotEncoding])
+    encoded_df = pd.DataFrame(
+        encoded_array,
+        columns=encoder.get_feature_names_out(columnsToOneHotEncoding),
+        index=df.index
+    )
+    
+    df = df.drop(columns=columnsToOneHotEncoding)
+    df = pd.concat([df, encoded_df], axis=1)
+
+    df[columnsToScale] = scaler.transform(df[columnsToScale])
+
+    prediction = model.predict(df)
+
     return {"prediction": prediction.tolist()}

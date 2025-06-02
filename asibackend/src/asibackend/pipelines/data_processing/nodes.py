@@ -35,10 +35,12 @@ def drop_columns(df: pd.DataFrame) -> pd.DataFrame:
         "ManagerID",
         "SpecialProjectsCount",
         "EmploymentStatus",
-        "TermReason"
+        "TermReason",
+        "Position"
     ], errors="ignore")
 
     return df
+
 
 
 def feature_engineering(df: pd.DataFrame) -> pd.DataFrame:

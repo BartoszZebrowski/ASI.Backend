@@ -13,14 +13,6 @@ model_input_data:
 
 model:
   type: tensorflow.TensorFlowModelDataset
-  filepath: data/03_models/trained_model
+  filepath: data/03_models/trained_model.keras
   save_args:
     overwrite: true
-
-scaler:
-  type: pickle.PickleDataSet
-  filepath: data/03_models/scaler.pkl
-
-encoder:
-  type: pickle.PickleDataSet
-  filepath: data/03_models/encoder.pkl
