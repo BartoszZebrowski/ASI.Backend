@@ -4,9 +4,6 @@ import joblib
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from kedro.framework.context import KedroContext
-from kedro.framework.hooks import _create_hook_manager
-from kedro.framework.startup import bootstrap_project
 from tensorflow.keras.models import load_model
 
 model = load_model('../../data/03_models/trained_model.keras')
