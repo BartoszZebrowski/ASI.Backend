@@ -1,0 +1,312 @@
+Salary,Department,PerformanceScore,EngagementSurvey,EmpSatisfaction,DaysLateLast30,Absences,YearsAtCompany
+62506,Production       ,Exceeds,4.6,5,0,1,14
+104437,IT/IS,Fully Meets,4.96,3,0,17,10
+64955,Production       ,Fully Meets,3.02,3,0,3,14
+64991,Production       ,Fully Meets,4.84,5,0,15,17
+50825,Production       ,Fully Meets,5.0,4,0,2,14
+57568,Production       ,Exceeds,5.0,5,0,15,13
+95660,Software Engineering,Fully Meets,3.04,3,0,19,11
+59365,Production       ,Fully Meets,5.0,4,0,19,12
+47837,Production       ,Fully Meets,4.46,3,0,4,16
+50178,IT/IS,Fully Meets,5.0,5,0,16,10
+54670,Production       ,Fully Meets,4.2,4,0,12,14
+47211,Production       ,Fully Meets,4.2,3,0,15,13
+92328,IT/IS,Exceeds,4.28,4,0,9,11
+58709,Production       ,Fully Meets,4.6,4,0,7,13
+52505,Production       ,Fully Meets,5.0,5,0,1,13
+57834,Production       ,Fully Meets,5.0,4,0,20,14
+70131,Production       ,Exceeds,4.4,3,0,16,9
+59026,Production       ,Fully Meets,5.0,5,0,12,14
+110000,IT/IS,Fully Meets,4.5,4,0,8,11
+53250,Production       ,Fully Meets,4.2,4,0,13,12
+51044,Production       ,Fully Meets,5.0,3,0,13,13
+64919,Production       ,Fully Meets,4.2,3,0,2,12
+62910,Production       ,Exceeds,5.0,3,0,19,11
+66441,Production       ,Needs Improvement,2.0,3,2,3,14
+57815,Production       ,Fully Meets,4.8,5,0,5,14
+103613,IT/IS,Fully Meets,3.5,5,0,2,11
+106367,Admin Offices,Fully Meets,5.0,4,0,4,10
+74312,Production       ,Fully Meets,3.39,3,0,14,12
+53492,Production       ,Fully Meets,3.35,4,0,6,13
+63000,Admin Offices,Fully Meets,4.5,2,0,14,17
+65288,Production       ,Fully Meets,3.19,3,0,9,11
+64375,Production       ,Fully Meets,3.5,5,0,17,12
+74326,Sales,Fully Meets,3.14,5,1,19,14
+63763,Production       ,Fully Meets,4.51,4,0,3,13
+62162,Production       ,Fully Meets,3.25,5,0,15,14
+77692,Software Engineering,Fully Meets,3.84,3,0,4,14
+72640,Production       ,Exceeds,5.0,3,0,14,9
+93396,Software Engineering,Fully Meets,4.96,4,0,3,12
+52846,Production       ,Fully Meets,4.43,3,0,14,11
+100031,IT/IS,Fully Meets,5.0,5,0,7,9
+71860,Sales,Fully Meets,5.0,5,0,7,11
+61656,Production       ,Fully Meets,5.0,4,0,11,11
+110929,IT/IS,Fully Meets,4.5,5,0,8,9
+54237,Production       ,Fully Meets,3.3,4,0,11,11
+60380,Production       ,Fully Meets,3.8,5,0,4,12
+66808,Sales,Fully Meets,3.0,5,0,17,13
+64786,Production       ,Fully Meets,4.3,4,0,3,14
+64816,Production       ,Fully Meets,3.58,5,0,3,14
+68678,IT/IS,Fully Meets,4.7,3,0,2,13
+64066,Production       ,Fully Meets,4.2,5,0,9,14
+59369,Production       ,Fully Meets,4.2,4,0,6,15
+50373,Production       ,Exceeds,4.1,4,0,5,9
+63108,Production       ,Fully Meets,4.4,5,0,3,12
+59144,Production       ,Needs Improvement,2.0,3,5,16,14
+68051,Production       ,Needs Improvement,4.13,2,3,3,15
+170500,Production       ,Exceeds,3.7,5,0,15,16
+63381,Production       ,Fully Meets,4.73,5,0,6,10
+83552,IT/IS,Fully Meets,3.04,3,0,2,10
+56149,Production       ,Fully Meets,4.12,5,0,15,9
+92329,IT/IS,Fully Meets,5.0,3,0,5,11
+65729,Sales,Fully Meets,4.62,4,0,8,11
+85028,IT/IS,Fully Meets,3.1,5,0,19,11
+57583,Production       ,Fully Meets,5.0,3,0,1,13
+56294,Production       ,Fully Meets,3.96,4,0,6,14
+56991,Production       ,Fully Meets,4.3,4,2,2,7
+55722,Production       ,Fully Meets,5.0,4,0,14,14
+101199,Software Engineering,Fully Meets,3.79,5,0,8,13
+61568,Sales,PIP,1.93,3,6,5,11
+58275,Production       ,Fully Meets,4.62,5,0,1,14
+53189,Production       ,PIP,1.12,2,4,9,11
+96820,IT/IS,Fully Meets,3.01,5,0,15,8
+51259,Production       ,Fully Meets,4.3,4,0,1,11
+59231,Sales,PIP,2.3,1,2,17,13
+61584,Production       ,Needs Improvement,3.88,4,0,6,12
+46335,Production       ,Fully Meets,3.4,5,0,15,13
+70621,IT/IS,Fully Meets,4.11,4,0,16,10
+138888,IT/IS,Exceeds,4.3,5,0,4,11
+74241,Sales,Exceeds,4.77,5,0,14,14
+75188,Production       ,Fully Meets,4.52,4,0,4,11
+62514,Production       ,Fully Meets,2.9,3,0,6,15
+60070,Production       ,Fully Meets,5.0,3,0,7,14
+48888,Production       ,Fully Meets,4.7,5,0,8,11
+54285,Production       ,Fully Meets,4.2,3,0,3,11
+56847,Production       ,PIP,3.0,1,2,5,11
+60340,Production       ,Needs Improvement,5.0,4,5,16,13
+59124,Production       ,Needs Improvement,2.3,3,5,19,11
+99280,Software Engineering,Needs Improvement,2.1,5,4,19,14
+71776,Production       ,Fully Meets,4.4,5,0,17,11
+65902,Production       ,Fully Meets,4.0,4,0,7,11
+57748,Production       ,Fully Meets,3.13,3,0,16,14
+64057,Production       ,PIP,1.56,5,6,15,10
+53366,IT/IS,PIP,1.2,3,3,2,10
+58530,Production       ,Fully Meets,5.0,5,0,19,13
+72609,Production       ,Fully Meets,4.76,5,0,20,14
+55965,Production       ,Fully Meets,3.66,3,0,6,14
+70187,Sales,PIP,2.0,5,4,7,11
+178000,IT/IS,Exceeds,5.0,5,0,15,14
+99351,Admin Offices,Fully Meets,5.0,3,0,3,16
+67251,Sales,Fully Meets,4.3,3,2,7,14
+65707,IT/IS,Fully Meets,4.7,4,0,1,15
+52249,Production       ,Fully Meets,4.5,3,0,5,10
+53171,Production       ,Fully Meets,4.2,4,0,12,14
+51337,Production       ,Fully Meets,3.73,3,0,19,10
+51505,Production       ,Fully Meets,4.24,4,0,2,14
+59370,Sales,Fully Meets,3.97,4,0,7,11
+54933,Production       ,Needs Improvement,3.97,4,3,15,13
+57815,Production       ,Exceeds,3.9,4,0,3,11
+61555,Sales,Fully Meets,4.5,5,0,20,10
+114800,IT/IS,Fully Meets,4.6,4,0,10,10
+74679,IT/IS,Fully Meets,4.3,5,0,20,10
+53018,Production       ,Fully Meets,4.3,5,0,7,12
+59892,Production       ,Exceeds,4.5,4,0,1,14
+68898,Production       ,PIP,3.0,3,3,10,15
+61242,IT/IS,Fully Meets,4.61,4,0,11,10
+66825,Production       ,Fully Meets,4.6,3,0,20,11
+48285,Production       ,Fully Meets,5.0,3,0,2,13
+66149,Production       ,Fully Meets,4.4,5,0,1,12
+49256,Production       ,Fully Meets,4.1,5,0,3,12
+62957,Production       ,Fully Meets,4.63,3,0,2,10
+63813,Production       ,Fully Meets,5.0,5,0,17,14
+99020,IT/IS,Fully Meets,4.2,5,0,8,8
+71707,Sales,Fully Meets,4.5,5,0,20,13
+54828,Production       ,Fully Meets,4.2,4,0,13,14
+64246,Production       ,Fully Meets,5.0,3,0,20,12
+52177,Production       ,Fully Meets,4.64,4,0,8,13
+62065,Production       ,Exceeds,4.76,4,0,5,11
+46998,Production       ,Fully Meets,4.17,4,0,1,13
+68099,Production       ,Fully Meets,5.0,3,0,15,14
+70545,Sales,Fully Meets,3.6,5,0,9,11
+63478,Production       ,Fully Meets,3.03,5,0,16,14
+97999,IT/IS,Fully Meets,4.48,5,0,4,10
+180000,Sales,Fully Meets,4.5,4,0,19,11
+49920,Admin Offices,Fully Meets,3.24,3,0,6,10
+55425,Production       ,Fully Meets,4.8,4,0,4,13
+69340,Production       ,Fully Meets,3.0,5,0,4,9
+64995,Production       ,Fully Meets,4.5,3,0,6,10
+68182,Production       ,Fully Meets,3.72,3,0,18,14
+83082,Production       ,Needs Improvement,2.34,2,3,4,14
+51908,Production       ,Fully Meets,3.99,3,0,14,12
+61242,Production       ,Fully Meets,4.1,3,0,7,13
+45069,Production       ,Fully Meets,4.3,5,0,7,12
+60724,Production       ,Exceeds,4.6,4,0,11,14
+60436,Production       ,Fully Meets,5.0,5,0,9,11
+46837,Production       ,Exceeds,4.7,4,0,9,14
+105700,IT/IS,Fully Meets,3.75,3,0,2,10
+63322,Production       ,Exceeds,4.3,3,0,1,11
+61154,Production       ,Fully Meets,4.0,4,0,4,14
+68999,Sales,Fully Meets,4.5,5,0,2,14
+50482,Production       ,Fully Meets,3.07,4,0,10,12
+65310,Sales,Fully Meets,4.3,5,0,13,12
+250000,Executive Office,Fully Meets,4.83,3,0,10,13
+54005,Production       ,Fully Meets,3.6,5,0,16,14
+45433,Production       ,Fully Meets,3.49,4,0,6,14
+46654,Production       ,Fully Meets,3.1,3,0,3,11
+63973,Production       ,Fully Meets,3.38,3,0,17,14
+71339,Sales,Fully Meets,3.65,5,0,20,14
+93206,IT/IS,Fully Meets,4.46,5,0,7,11
+82758,Production       ,Fully Meets,4.78,4,0,9,14
+66074,Production       ,Fully Meets,4.52,3,0,20,12
+46120,Production       ,Fully Meets,5.0,5,0,13,13
+64520,Admin Offices,Fully Meets,5.0,4,0,3,11
+61962,Production       ,Fully Meets,4.9,3,0,20,13
+81584,IT/IS,Fully Meets,4.1,5,0,2,9
+63676,Production       ,Fully Meets,4.88,3,0,17,14
+93046,Admin Offices,Fully Meets,4.1,4,0,20,9
+64738,Production       ,Fully Meets,4.1,3,0,10,13
+70468,Sales,Fully Meets,4.53,3,0,16,13
+77915,Production       ,Exceeds,4.1,3,0,11,12
+52624,Production       ,Fully Meets,3.18,4,0,16,14
+63450,Production       ,Fully Meets,4.0,3,0,7,12
+51777,IT/IS,Exceeds,4.64,4,0,14,14
+67237,Production       ,Fully Meets,4.65,4,0,15,12
+73330,Production       ,Exceeds,4.2,4,0,19,12
+52057,Production       ,Fully Meets,5.0,3,0,6,10
+47434,Production       ,Exceeds,5.0,4,0,17,14
+52788,Production       ,Fully Meets,3.08,4,0,18,13
+45395,Production       ,Fully Meets,4.6,4,0,14,11
+62385,Production       ,Fully Meets,5.0,3,0,4,9
+68407,Production       ,Fully Meets,5.0,4,0,16,14
+61349,Production       ,Fully Meets,4.1,3,0,11,12
+105688,Software Engineering,Fully Meets,4.5,5,0,14,12
+54132,Production       ,Fully Meets,5.0,4,0,8,14
+55315,Production       ,Fully Meets,5.0,5,0,16,10
+62810,Production       ,Fully Meets,3.93,3,0,20,12
+63291,Sales,Fully Meets,3.4,4,0,7,9
+62659,Production       ,Fully Meets,4.18,4,0,17,13
+55688,Production       ,Fully Meets,5.0,4,0,10,10
+83667,Production       ,Fully Meets,4.37,3,0,2,13
+55800,Production       ,PIP,3.0,2,6,6,14
+58207,Production       ,Fully Meets,3.7,3,0,14,14
+157000,IT/IS,Needs Improvement,2.39,3,4,13,13
+72460,Production       ,Exceeds,4.7,3,0,1,12
+72106,Production       ,Fully Meets,4.1,4,0,12,13
+52599,IT/IS,Fully Meets,3.81,3,0,6,10
+63430,Production       ,Fully Meets,4.4,4,0,18,12
+74417,Production       ,Fully Meets,4.29,5,0,11,12
+57575,Production       ,Fully Meets,4.1,4,0,13,12
+87921,IT/IS,Fully Meets,5.0,3,0,17,8
+50470,Production       ,Fully Meets,4.3,3,0,19,14
+46664,Production       ,Fully Meets,3.18,3,0,10,12
+48495,Production       ,Fully Meets,5.0,5,0,11,11
+52984,Production       ,Exceeds,4.0,3,0,12,12
+63695,Sales,Fully Meets,5.0,5,0,2,12
+62061,Production       ,Fully Meets,3.6,5,0,4,12
+66738,Production       ,Fully Meets,4.53,5,0,5,11
+52674,Production       ,PIP,2.33,2,6,3,11
+71966,Production       ,Fully Meets,5.0,3,0,17,13
+63051,Sales,Fully Meets,4.28,3,0,1,12
+47414,Production       ,Exceeds,5.0,3,0,13,12
+53060,Production       ,Needs Improvement,4.25,3,4,6,11
+68829,Sales,Fully Meets,5.0,5,0,18,10
+63515,Production       ,Fully Meets,3.89,4,0,7,14
+108987,Software Engineering,Exceeds,5.0,5,0,13,14
+93093,IT/IS,Fully Meets,4.7,4,0,19,11
+53564,Production       ,Needs Improvement,3.54,5,4,15,14
+60270,Production       ,Needs Improvement,2.4,5,5,2,14
+45998,Production       ,Fully Meets,3.45,4,0,5,14
+57954,Production       ,Exceeds,4.2,5,0,12,14
+74669,Production       ,Fully Meets,4.16,5,0,6,15
+74226,Production       ,Fully Meets,4.3,3,0,14,13
+93554,IT/IS,Exceeds,4.6,5,0,16,11
+64724,Production       ,Fully Meets,5.0,3,0,13,14
+47001,Production       ,Fully Meets,3.66,3,0,15,18
+61844,Sales,Fully Meets,4.2,5,0,9,13
+46799,Production       ,Fully Meets,3.17,4,0,14,14
+59472,Production       ,Fully Meets,4.8,3,0,14,11
+46430,Production       ,Fully Meets,4.5,5,0,16,13
+83363,Software Engineering,Fully Meets,4.15,4,0,4,14
+95920,IT/IS,Fully Meets,4.4,4,0,10,9
+61729,Production       ,Fully Meets,3.8,5,0,19,14
+61809,Sales,Fully Meets,3.98,3,0,4,11
+45115,Production       ,Fully Meets,5.0,4,0,11,14
+46738,Production       ,Exceeds,4.36,5,0,16,14
+64971,Production       ,Fully Meets,4.5,4,0,10,14
+55578,Production       ,Fully Meets,4.2,5,0,13,14
+50428,Production       ,Fully Meets,5.0,3,0,11,14
+61422,Production       ,Needs Improvement,3.6,3,4,16,14
+63353,Production       ,Exceeds,3.6,5,0,4,12
+89883,IT/IS,Fully Meets,3.69,5,0,15,10
+120000,IT/IS,Fully Meets,3.88,3,0,12,10
+150290,IT/IS,Fully Meets,4.94,3,0,17,8
+60627,Production       ,Fully Meets,5.0,4,0,8,11
+53180,Production       ,Fully Meets,5.0,5,0,4,14
+140920,IT/IS,Fully Meets,3.6,5,0,13,12
+148999,IT/IS,Fully Meets,4.3,4,0,8,13
+86214,Software Engineering,Fully Meets,4.2,3,0,2,13
+47750,Production       ,Needs Improvement,2.6,4,5,4,9
+46428,Production       ,Fully Meets,4.6,5,0,7,16
+57975,Production       ,Fully Meets,4.1,3,0,13,15
+88527,IT/IS,Fully Meets,4.2,3,0,2,10
+56147,Production       ,Fully Meets,3.51,3,0,2,11
+50923,Production       ,Fully Meets,5.0,5,0,14,12
+50750,IT/IS,Fully Meets,3.31,3,0,7,11
+52087,Production       ,Fully Meets,4.81,4,0,15,12
+87826,IT/IS,Fully Meets,3.32,3,0,16,10
+51920,Admin Offices,Fully Meets,5.0,3,0,2,10
+63878,Production       ,Fully Meets,4.68,4,0,20,16
+60656,Production       ,Exceeds,4.3,3,0,4,11
+72992,Sales,Needs Improvement,2.4,4,2,16,11
+55000,Admin Offices,Fully Meets,3.8,4,0,17,14
+58939,Production       ,Fully Meets,3.73,3,0,16,12
+66593,IT/IS,Fully Meets,4.3,3,0,19,14
+87565,IT/IS,Fully Meets,3.27,4,0,13,9
+64021,Production       ,PIP,2.4,2,6,20,13
+65714,Production       ,Fully Meets,4.83,5,0,15,13
+62425,Production       ,Exceeds,4.1,4,0,16,12
+47961,Production       ,Fully Meets,4.1,4,0,9,14
+58273,Sales,PIP,1.81,2,3,5,11
+63003,Admin Offices,Fully Meets,3.9,5,0,9,11
+61355,Production       ,Fully Meets,4.7,3,0,4,11
+60120,Sales,Fully Meets,4.1,4,0,18,15
+63682,Production       ,Fully Meets,3.73,4,0,12,16
+63025,Production       ,Fully Meets,4.36,5,0,10,10
+59238,Production       ,Fully Meets,3.4,5,0,13,13
+92989,Software Engineering,Exceeds,4.5,5,0,1,11
+90100,IT/IS,Fully Meets,3.4,3,0,14,8
+60754,Production       ,Fully Meets,4.5,5,0,11,16
+72202,Production       ,Fully Meets,3.93,3,0,3,14
+58370,Sales,Fully Meets,3.69,3,0,18,11
+48413,Production       ,Fully Meets,3.98,4,0,1,14
+67176,Production       ,Fully Meets,4.1,4,0,15,18
+56339,Production       ,Fully Meets,4.21,5,0,4,12
+64397,Sales,Exceeds,4.1,3,0,6,19
+63025,Production       ,Needs Improvement,2.44,5,4,18,11
+75281,IT/IS,Fully Meets,5.0,3,0,11,10
+100416,Software Engineering,Fully Meets,4.6,3,0,9,12
+74813,Production       ,Fully Meets,4.4,3,0,5,14
+76029,IT/IS,Fully Meets,5.0,4,0,8,10
+57859,Sales,Fully Meets,2.81,3,0,16,14
+58523,Production       ,Exceeds,4.5,5,0,15,13
+88976,Production       ,Fully Meets,3.93,3,0,19,14
+55875,Sales,Fully Meets,4.5,4,0,11,13
+113999,IT/IS,Fully Meets,4.33,3,0,9,10
+49773,Production       ,Exceeds,4.3,5,0,18,14
+62068,Production       ,Fully Meets,3.21,3,0,7,10
+66541,Production       ,Fully Meets,3.11,5,0,4,11
+80512,Production       ,Fully Meets,4.5,3,0,5,14
+50274,Production       ,Needs Improvement,2.5,3,6,13,13
+84903,IT/IS,Fully Meets,3.42,4,0,17,8
+107226,IT/IS,Fully Meets,4.2,4,0,7,10
+58371,Production       ,Fully Meets,5.0,5,0,11,14
+55140,Production       ,Fully Meets,5.0,3,0,7,14
+58062,Production       ,Fully Meets,3.6,5,0,9,14
+59728,Production       ,Fully Meets,4.3,4,0,16,13
+70507,Production       ,Exceeds,5.0,3,0,7,12
+60446,Production       ,Fully Meets,3.4,4,0,14,11
+65893,Production       ,Fully Meets,4.07,4,0,13,11
+48513,Production       ,PIP,3.2,2,5,4,17
+220450,IT/IS,Exceeds,4.6,5,0,16,15
+89292,IT/IS,Fully Meets,5.0,3,0,11,10
+45046,Production       ,Fully Meets,4.5,5,0,2,11
