@@ -5,7 +5,7 @@ kedro-viz
 notebook
 kedro-datasets[pandas,tensorflow]
 tensorflow
-sklearn
+scikit-learn
 joblib
 pandas
 fastapi

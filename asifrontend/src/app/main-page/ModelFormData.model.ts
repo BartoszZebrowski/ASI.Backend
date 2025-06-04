@@ -1,12 +1,10 @@
 export interface ModelFormData {
-  Position: string;
-  DateofHire: string;
-  TermReason: string;
-  EmploymentStatus: string;
-  Department: string;
-  PerformanceScore: string;
-  EngagementSurvey: string;
-  EmpSatisfaction: string;
-  DaysLateLast30: string;
-  Absences: string;
+  
+    department: string;
+    performanceScore: string;
+    engagmentSurvey: number;
+    empSatisfaction: number;
+    daysLateLast30: number;
+    absences: number;
+    yearsAtCompany: number;
 }

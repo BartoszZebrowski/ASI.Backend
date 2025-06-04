@@ -5,6 +5,8 @@ import joblib
 from fastapi import FastAPI
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
+from fastapi.middleware.cors import CORSMiddleware
+
 
 model = load_model('../../data/03_models/trained_model.keras')
 scaler = joblib.load('../../data/04_scalers/scaler.pkl')
@@ -15,6 +17,14 @@ columnsToScale = [ 'EngagementSurvey', 'EmpSatisfaction', 'DaysLateLast30', 'Abs
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 class InputData(BaseModel):
     department: str
     performanceScore: str
@@ -24,7 +34,7 @@ class InputData(BaseModel):
     absences: float
     yearsAtCompany: float
 
-@app.get("/predict")
+@app.post("/predict")
 def predict(data: InputData):
 
     print(data)
@@ -55,4 +65,4 @@ def predict(data: InputData):
 
     prediction = model.predict(df)
 
-    return {"prediction": prediction.tolist()}
+    return str(prediction[0][0])
