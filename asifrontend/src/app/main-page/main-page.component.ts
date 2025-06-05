@@ -46,7 +46,8 @@ formData: ModelFormData = {
     if(validationResult){
      this.apiService.getPrediction(this.formData).subscribe({
       next: (data) => {
-        this.result = data;
+
+        this.result = data
       },
       error: (err) => {
         console.error('Błąd podczas pobierania danych:', err);
@@ -55,7 +56,6 @@ formData: ModelFormData = {
     });
   }
   }
-
 
   OptionSelectValidator(data: ModelFormData){
     let isValid = true;

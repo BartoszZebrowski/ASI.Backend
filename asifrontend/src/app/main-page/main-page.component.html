@@ -71,8 +71,8 @@
 <div class = "container">
     <p class="result">
         Proponowana kwota:
-        @if (result !== null) {
-            Od: {{ result }} do {{ result + rangeOffset }}
+        @if (result !== null && result >= rangeOffset) {
+            Od: {{ result - rangeOffset}} do {{ result + rangeOffset }}
         }
     </p>
 </div>
