@@ -11,11 +11,11 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   
-  getPrediction(model: ModelFormData): Observable<string> {
+  getPrediction(model: ModelFormData): Observable<number> {
     
     const url = 'http://localhost:8000/predict';
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<string>(url, model, {headers});
+    return this.http.post<number>(url, model, {headers});
 
   }
 }

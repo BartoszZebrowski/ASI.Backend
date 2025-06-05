@@ -14,36 +14,34 @@ export class MainPageComponent {
   departmentList = ['Admin Offices', 'Executive Office', 'IT/IS', 'Production', 'Sales', 'Software Engineering'];
   performanceScoreList = ['Exceeds', 'Fully Meets', 'Needs Improvement', 'PIP'];
 
-
+  
   validationErrors = {
     departmentError: '',
     performanceScoreError: '',
-    engagmentSurveyError: '',
-    empSatisfactionError: '',
-    daysLateLast30Error: '',
-    absencesError: '',
-    yearsAtCompanyError: ''
   };
+  
+  result: number | null = null;
 
-  result: string = "";
+  rangeOffset = 5000;
 
 
-  formData: ModelFormData = {
-    department: '',
-    performanceScore: '',
-    engagmentSurvey: 0,
-    empSatisfaction: 0,
-    daysLateLast30: 0,
-    absences: 0,
-    yearsAtCompany: 0
-  };
+
+formData: ModelFormData = {
+  department: '',
+  performanceScore: '',
+  engagmentSurvey: null,
+  empSatisfaction: null,
+  daysLateLast30: null,
+  absences: null,
+  yearsAtCompany: null
+};
 
 
   onSubmit() {
     
     console.log(this.formData);
 
-    var validationResult = this.fieldValidator(this.formData)
+    var validationResult = this.OptionSelectValidator(this.formData)
 
     if(validationResult){
      this.apiService.getPrediction(this.formData).subscribe({
@@ -59,61 +57,70 @@ export class MainPageComponent {
   }
 
 
-  fieldValidator(data: ModelFormData){
+  OptionSelectValidator(data: ModelFormData){
     let isValid = true;
 
-    this.validationErrors.departmentError= '',
-    this.validationErrors.performanceScoreError= '',
-    this.validationErrors.engagmentSurveyError = '';
-    this.validationErrors.empSatisfactionError = '';
-    this.validationErrors.daysLateLast30Error = '';
-    this.validationErrors.absencesError = '';
-    this.validationErrors.yearsAtCompanyError = '';
+    this.validationErrors.departmentError= '';
+    this.validationErrors.performanceScoreError= '';
 
-    if(data.engagmentSurvey > 5 || data.engagmentSurvey < 0){
-      this.validationErrors.engagmentSurveyError = 'Wartość od 0 do 5';
-      isValid = false;
-      this.result = '';
-    }
-
-    if(data.empSatisfaction > 5 || data.empSatisfaction < 0){
-      this.validationErrors.empSatisfactionError = 'Wartość od 0 do 5';
-      isValid = false;
-      this.result = '';
-    }
-
-    if(data.daysLateLast30 > 100 || data.daysLateLast30 < 0){
-      this.validationErrors.daysLateLast30Error = 'Wartość od 0 do 100';
-      isValid = false;
-      this.result = '';
-    }
-
-    if(data.absences > 100 || data.absences < 0){
-      this.validationErrors.absencesError = 'Wartość od 0 do 100';
-      isValid = false;
-      this.result = '';
-    }
-
-
-    if(data.yearsAtCompany > 100 || data.yearsAtCompany < 0){
-      this.validationErrors.yearsAtCompanyError = 'Wartość od 0 do 100';
-      isValid = false;
-      this.result = '';
-    }
 
     if(!data.department || data.department === ''){
       this.validationErrors.departmentError = 'Wybierz z listy';
       isValid = false;
-      this.result = '';
+      this.result = 0;
     }
 
     if(!data.performanceScore || data.performanceScore === ''){
       this.validationErrors.performanceScoreError = 'Wybierz z listy';
       isValid = false;
-      this.result = '';
+      this.result = 0;
     }
 
     return isValid;
   }
 
+
+  validateZeroFiveRange(data: ModelFormData){
+
+    if(data.engagmentSurvey !== null){
+      if (data.engagmentSurvey > 5) {
+        data.engagmentSurvey = 5;
+      } else if (data.engagmentSurvey < 0) {
+        data.engagmentSurvey = 0;
+      }
+    }
+
+    if(data.empSatisfaction !== null){
+      if (data.empSatisfaction > 5) {
+        data.empSatisfaction = 5;
+      } else if (data.empSatisfaction < 0) {
+        data.empSatisfaction = 0;
+      }
+    }
+
+    if(data.daysLateLast30 !== null){
+      if (data.daysLateLast30 > 100) {
+        data.daysLateLast30 = 100;
+      } else if (data.daysLateLast30 < 0) {
+        data.daysLateLast30 = 0;
+      }
+    } 
+
+    if(data.absences !== null){
+      if (data.absences > 100) {
+        data.absences = 100;
+      } else if (data.absences < 0) {
+        data.absences = 0;
+      }
+    }
+
+    if(data.yearsAtCompany !== null){
+      if (data.yearsAtCompany > 100) {
+        data.yearsAtCompany = 100;
+      } else if (data.yearsAtCompany < 0) {
+        data.yearsAtCompany = 0;
+      }
+    }
+
+  }
 }

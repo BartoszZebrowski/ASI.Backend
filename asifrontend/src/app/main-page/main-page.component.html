@@ -30,43 +30,33 @@
 
     <div>
         <label>EngagmentSurvey</label><br/>
-        <input type="number" [(ngModel)]="formData.engagmentSurvey" 
+        <input type="number" placeholder="Wartość od 0 do 5" [(ngModel)]="formData.engagmentSurvey" (change)="validateZeroFiveRange(formData)"
         name="EngagmentSurvey" min="0" max="5" step="0.1">
     </div>
 
-    <p class = "errorText">{{validationErrors.engagmentSurveyError}}</p>
-
     <div>
         <label>EmpSatisfaction</label><br/>
-        <input type="number" [(ngModel)]="formData.empSatisfaction" 
+        <input type="number" placeholder="Wartość od 0 do 5" [(ngModel)]="formData.empSatisfaction" (change)="validateZeroFiveRange(formData)"
         name="EmpSatisfaction" min="0" max="5" step="0.1">
     </div>
 
-    <p class = "errorText">{{validationErrors.empSatisfactionError}}</p>
-
     <div>
         <label>DaysLateLast30</label><br/>
-        <input type="number" [(ngModel)]="formData.daysLateLast30" 
+        <input type="number" placeholder="Wartość od 0 do 100" [(ngModel)]="formData.daysLateLast30" (change)="validateZeroFiveRange(formData)"
         name="DaysLateLast30" min="0" max="100">
     </div>
 
-    <p class = "errorText">{{validationErrors.daysLateLast30Error}}</p>
-
     <div>
         <label>Absences</label><br/>
-        <input type="number" [(ngModel)]="formData.absences" 
+        <input type="number" placeholder="Wartość od 0 do 100" [(ngModel)]="formData.absences" (change)="validateZeroFiveRange(formData)"
         name="Absences" min="0" max="100">
     </div>
 
-    <p class = "errorText">{{validationErrors.absencesError}}</p>
-
     <div>
         <label>YearsAtCompany</label><br/>
-        <input type="number" [(ngModel)]="formData.yearsAtCompany" 
-        name="YearsAtCompany" min="0" max="100">
+        <input type="number" placeholder="Wartość od 0 do 100" [(ngModel)]="formData.yearsAtCompany" (change)="validateZeroFiveRange(formData)"
+        name="YearsAtCompany" min="0" max="100" >
     </div>
-
-    <p class = "errorText">{{validationErrors.yearsAtCompanyError}}</p>
 
     <div class = "sub">
         <button type="submit">Submit</button>
@@ -79,5 +69,10 @@
 </div>
 
 <div class = "container">
-    <p class = "result"> Proponowana kwota:  {{result}}</p>
+    <p class="result">
+        Proponowana kwota:
+        @if (result !== null) {
+            Od: {{ result }} do {{ result + rangeOffset }}
+        }
+    </p>
 </div>
