@@ -65,4 +65,4 @@ def predict(data: InputData):
 
     prediction = model.predict(df)
 
-    return float(prediction[0][0])
+    return int(prediction[0][0])
