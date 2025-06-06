@@ -1,0 +1,14 @@
+FROM node:18 as build
+WORKDIR /app
+COPY asifrontend/package*.json ./
+RUN npm install
+COPY asifrontend .
+RUN npm run build --prod
+RUN ls -l /app/dist
+RUN ls -l /app/dist/asi-frontend
+
+FROM nginx:alpine
+COPY --from=build /app/dist/asi-frontend/browser/ /usr/share/nginx/html/
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
