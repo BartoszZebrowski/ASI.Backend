@@ -13,7 +13,7 @@ export class ApiService {
   
   getPrediction(model: ModelFormData): Observable<number> {
     
-    const url = 'http://localhost:8000/predict';
+    const url = 'http://192.168.1.41:8000/predict';
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post<number>(url, model, {headers});
 
