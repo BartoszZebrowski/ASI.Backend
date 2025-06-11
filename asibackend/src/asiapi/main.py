@@ -9,11 +9,18 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 model = load_model('../../data/03_models/trained_model.keras')
-scaler = joblib.load('../../data/04_scalers/scaler.pkl')
+
+standardScaler = joblib.load('../../data/04_scalers/standardScaler.pkl')
+minMaxScaler = joblib.load('../../data/04_scalers/minMaxScaler.pkl')
+powerTransformer = joblib.load('../../data/04_scalers/powerTransformer.pkl')
+
 encoder = joblib.load('../../data/05_encoders/encoder.pkl')
 
 columnsToOneHotEncoding = ['Department', 'PerformanceScore']
-columnsToScale = [ 'EngagementSurvey', 'EmpSatisfaction', 'DaysLateLast30', 'Absences', 'YearsAtCompany']
+columnsToStandardScaler = ['EmpSatisfaction', 'DaysLateLast30', 'Absences', 'YearsAtCompany', 'SpecialProjectsCount']
+columnsToPowerTransformer = ['Salary']
+columnsToMinMaxScaler = [ 'EngagementSurvey']
+
 
 app = FastAPI()
 
@@ -33,6 +40,7 @@ class InputData(BaseModel):
     daysLateLast30: float
     absences: float
     yearsAtCompany: float
+    specialProjectsCount: float
 
 @app.post("/predict")
 def predict(data: InputData):
@@ -46,7 +54,8 @@ def predict(data: InputData):
         'EmpSatisfaction': [data.empSatisfaction],
         'DaysLateLast30': [data.daysLateLast30],
         'Absences': [data.absences],
-        'YearsAtCompany': [data.yearsAtCompany]
+        'YearsAtCompany': [data.yearsAtCompany],
+        'SpecialProjectsCount': [data.specialProjectsCount]
     }
 
     df = pd.DataFrame(input_dict)
@@ -61,8 +70,11 @@ def predict(data: InputData):
     df = df.drop(columns=columnsToOneHotEncoding)
     df = pd.concat([df, encoded_df], axis=1)
 
-    df[columnsToScale] = scaler.transform(df[columnsToScale])
+    df[columnsToStandardScaler] = standardScaler.transform(df[columnsToStandardScaler])
+    df[columnsToMinMaxScaler] = minMaxScaler.transform(df[columnsToMinMaxScaler])
 
     prediction = model.predict(df)
 
-    return int(prediction[0][0])
+    salary = powerTransformer.inverse_transform([[prediction[0][0]]])[0][0]
+
+    return int(salary)

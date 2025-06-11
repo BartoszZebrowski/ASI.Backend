@@ -33,7 +33,6 @@ def drop_columns(df: pd.DataFrame) -> pd.DataFrame:
         "GenderID",
         "DeptID",
         "ManagerID",
-        "SpecialProjectsCount",
         "EmploymentStatus",
         "TermReason",
         "Position"
