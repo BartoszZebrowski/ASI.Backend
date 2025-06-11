@@ -6,4 +6,5 @@ export interface ModelFormData {
   daysLateLast30: number | null;
   absences: number | null;
   yearsAtCompany: number | null;
+  specialProjectsCount: number | null;
 }

@@ -21,10 +21,7 @@ export class MainPageComponent {
   };
   
   result: number | null = null;
-
-  rangeOffset = 5000;
-
-
+  rangeOffset: number | null = null; 
 
 formData: ModelFormData = {
   department: '',
@@ -33,7 +30,8 @@ formData: ModelFormData = {
   empSatisfaction: null,
   daysLateLast30: null,
   absences: null,
-  yearsAtCompany: null
+  yearsAtCompany: null,
+  specialProjectsCount: null
 };
 
 
@@ -46,6 +44,13 @@ formData: ModelFormData = {
     if(validationResult){
      this.apiService.getPrediction(this.formData).subscribe({
       next: (data) => {
+
+        
+        this.rangeOffset = Math.round((data * 0.15)/2);
+
+        console.log("rangeOffset:   " + this.rangeOffset)
+        console.log("data:   "+data)
+
 
         this.result = data
       },
@@ -119,6 +124,14 @@ formData: ModelFormData = {
         data.yearsAtCompany = 100;
       } else if (data.yearsAtCompany < 0) {
         data.yearsAtCompany = 0;
+      }
+    }
+
+      if(data.specialProjectsCount !== null){
+        if (data.specialProjectsCount > 100) {
+          data.specialProjectsCount = 100;
+      } else if (data.specialProjectsCount < 0) {
+        data.specialProjectsCount = 0;
       }
     }
 

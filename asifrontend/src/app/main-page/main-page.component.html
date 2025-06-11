@@ -58,6 +58,12 @@
         name="YearsAtCompany" min="0" max="100" >
     </div>
 
+    <div>
+        <label>SpecialProjectsCount</label><br/>
+        <input type="number" placeholder="Wartość od 0 do 100" [(ngModel)]="formData.specialProjectsCount" (change)="validateZeroFiveRange(formData)"
+        name="SpecialProjectsCount" min="0" max="100" >
+    </div>
+
     <div class = "sub">
         <button type="submit">Submit</button>
     </div>
@@ -71,7 +77,7 @@
 <div class = "container">
     <p class="result">
         Proponowana kwota:
-        @if (result !== null && result >= rangeOffset) {
+        @if (result !== null && rangeOffset !== null && result >= rangeOffset) {
             Od: {{ result - rangeOffset}} do {{ result + rangeOffset }}
         }
     </p>
