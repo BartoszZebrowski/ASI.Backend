@@ -11,7 +11,6 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
 import matplotlib.pyplot as plt
 
-
 def scale_data(df: pd.DataFrame) -> pd.DataFrame:
 
     powerTransformer = PowerTransformer(method='yeo-johnson')
@@ -66,9 +65,9 @@ def train_model(X_train: pd.DataFrame, y_train: pd.DataFrame) -> LinearRegressio
     model = Sequential([
         Dense(100, activation='relu', input_shape=(X_train.shape[1],)),
         Dropout(0.4),
-        Dense(200, activation='relu'),
+        Dense(50, activation='relu'),
         Dropout(0.4),
-        Dense(100, activation='relu'),
+        Dense(20, activation='relu'),
         Dropout(0.3),
         Dense(1)
     ])
